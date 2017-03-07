@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{english}
+\setotherlanguages{sanskrit}
+\newfontfamily\devanagarifont[Script=Devanagari]{Sanskrit2003}
+\begin{document}
+
+\author{TeXstudio Team}
+\title{Simple Book Example}
+\date{January 2013}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\include{TeX_files/v1_c1_paper_on_hinduism}
+
+\backmatter
+% bibliography, glossary and index would go here.
+
+\end{document}

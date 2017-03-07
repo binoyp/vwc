@@ -1,0 +1,3 @@
+project-id: 975aa4f30e611b6a0c3d7644d7757670e4f9addf
+server-id:  468e95cd06dc8e05ebb304ef60b2bea09314869c
+admin-user: BinoyPilakkat (initial password is "6eaf3c")
