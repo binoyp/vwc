@@ -6,7 +6,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 from wordcloud import WordCloud, STOPWORDS
-
+import argparse
 
 
 MAX_WORDS = 2000
@@ -35,10 +35,10 @@ def gen_save(mask_path, text, pic_save_path, bgcolor = getrgb("hsl(25,0%,75%)"))
 
     """
     assert os.path.exists(mask_path)
-    pic_mask = np.array(Image.open(mask_path)
+    pic_mask = np.array(Image.open(mask_path))
     # edges = cv2.Canny(np.array(pic_mask),100,200)
-    wc = WordCloud(background_color=bgcolor , max_words=MAX_WORDS, mask=pic_mask,
-                stopwords=STOPWORDS.add("said"))
+    STOPWORDS.add("said")
+    wc = WordCloud(background_color=bgcolor , max_words=MAX_WORDS, mask=pic_mask, stopwords=STOPWORDS)
     # generate word cloud
     wc.generate(text)
 
@@ -59,6 +59,10 @@ def showmask(inparr):
     plt.axis("off")
     plt.show()
 
+def GenWordCloud():
+    pass
 
-d = path.dirname(__file__)
-text = open(path.join(d, 'pic2.txt')).read()
+
+if __name__ == "__main__":
+
+    pass
